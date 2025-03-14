@@ -9,7 +9,9 @@ export function Footer() {
   return (
     <footer style={{ marginTop: "1rem" }}>
       <strong>{`✅ ${correct} correctas - ❌ ${incorrect} incorrectas - ? ${unanswered} sin responder`}</strong>
-      <Button onClick={() => reset()}>Resetear juego</Button>
+      <div style={{ marginTop: "1rem" }}>
+        <Button onClick={() => reset()}>Resetear juego</Button>
+      </div>
     </footer>
   );
 }
