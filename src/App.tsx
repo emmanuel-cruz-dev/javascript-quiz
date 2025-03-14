@@ -1,7 +1,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 import "./App.css";
-import { JavaScriptLogo } from "./components/JavascriptLogo";
 import { Start } from "./components/Start";
+import { JavaScriptLogo } from "./components/JavaScriptLogo";
 
 function App() {
   return (
