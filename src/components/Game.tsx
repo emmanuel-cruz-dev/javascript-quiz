@@ -1,7 +1,14 @@
-// import { IconButton, Stack } from "@mui/material";
+import { IconButton, Stack, Card, Typography } from "@mui/material";
 import { useQuestionsStore } from "../store/questions";
+import { type Question as QuestionType } from "../types/types";
 
-const Question = ({ info }) => {};
+const Question = ({ info }: { info: QuestionType }) => {
+  return (
+    <Card variant="outlined">
+      <Typography variant="h5">{info.question}</Typography>
+    </Card>
+  );
+};
 
 export const Game = () => {
   const questions = useQuestionsStore((state) => state.questions);
@@ -11,7 +18,7 @@ export const Game = () => {
 
   return (
     <>
-      <Question />
+      <Question info={questionInfo} />
     </>
   );
 };
