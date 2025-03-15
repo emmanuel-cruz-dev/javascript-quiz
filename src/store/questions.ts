@@ -1,18 +1,8 @@
 import { create } from "zustand";
-import { type Question } from "../types/types";
+import { State } from "../types/types";
 import confetti from "canvas-confetti";
 import { persist } from "zustand/middleware";
 import { getAllQuestions } from "../services/questions";
-
-interface State {
-  questions: Question[];
-  currentQuestion: number;
-  fetchQuestions: (limit: number) => Promise<void>;
-  selectAnswer: (questionID: number, answerIndex: number) => void;
-  goNextQuestion: () => void;
-  goPreviousQuestion: () => void;
-  reset: () => void;
-}
 
 export const useQuestionsStore = create<State>()(
   persist(
