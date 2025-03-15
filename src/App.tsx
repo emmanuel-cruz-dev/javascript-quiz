@@ -7,12 +7,12 @@ import { Game } from "./components/Game";
 
 function App() {
   const questions = useQuestionsStore((store) => store.questions);
-  console.log(questions);
 
   return (
     <main>
       <Container maxWidth="sm">
         <Stack
+          marginBottom="8px"
           direction="row"
           gap={2}
           alignItems="center"
